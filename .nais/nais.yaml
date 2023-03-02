@@ -1,0 +1,12 @@
+apiVersion: 'nais.io/v1alpha1'
+kind: 'Application'
+metadata:
+  name: img2md
+  namespace: nada
+  labels:
+    team: nada
+spec:
+  image: {{image}}
+  port: 3000
+  ingresses:
+    - {{ingress}}
