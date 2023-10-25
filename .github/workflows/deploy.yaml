@@ -9,6 +9,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      packages: write
     outputs:
       image: ${{ steps.image.outputs.image }}
     steps:
