@@ -1,4 +1,4 @@
-import { Alert, BodyShort, Button, Heading } from '@navikt/ds-react'
+import { Accordion, Alert, BodyLong, BodyShort, Button, Heading } from '@navikt/ds-react'
 import Head from 'next/head'
 import { useState } from 'react'
 
@@ -38,6 +38,27 @@ export default function Home() {
         <title>Konvertering av bilder til Markdown-bilde</title>
       </Head>
       <Heading level="1" size="large">Konvertering av bilder til Markdown-bilde</Heading>
+      <div className="max-w-lg flex flex-col gap-4">
+      <Accordion>
+        <Accordion.Item>
+        <Accordion.Header>Formål for tjenesten</Accordion.Header>
+        <Accordion.Content>
+          <div className="flex flex-col gap-4">
+          <BodyLong>
+            I visse områder som Metabase er det noen ganger ønsket å inkludere bilder.
+            Metabase har ikke en løsning for å servere bilder, og i noen tilfeller burde bildene ikke være generelt tilgjengelige på nett.
+            For å løse dette kan man integrere bildedata direkte inn i Markdown, da vil disse ressursene være tilgjengelige for de som har tilgang til dokumentet men ikke noen andre!
+          </BodyLong>
+          <BodyLong>
+            Denne løsningen setter sikkerhet i fokus.
+            Når man laster inn et bilde vil det ikke sendes over nettverk, alt av konvertering skjer direkte i nettleseren din.
+            Dermed kan du med sikkerhet vite at intern data ikke sendes til tredjepart. :)
+          </BodyLong>
+          </div>
+        </Accordion.Content>
+        </Accordion.Item>
+      </Accordion>
+
       <div>
         <label htmlFor="filTilKonvertering" className="navds-button navds-button--primary navds-button--medium">
           <span className="navds-label">Last inn bilde</span>
@@ -61,6 +82,7 @@ export default function Home() {
           <BodyShort>PS: Husk å endre alt tekst til noe representativt :)</BodyShort>
       </div>
       }
+      </div>
     </section>
   )
 }
