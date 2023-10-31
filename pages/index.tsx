@@ -1,5 +1,4 @@
 import { Alert, BodyShort, Button, Heading } from '@navikt/ds-react'
-import { Base64 } from 'js-base64'
 import Head from 'next/head'
 import { useState } from 'react'
 
@@ -21,8 +20,8 @@ export default function Home() {
       const prefix = `![alt tekst](data:${f.type};base64,`
       const suffix = ")"
       f.arrayBuffer().then(buff => {
-        let x = new Uint8Array(buff);
-        setBase64(prefix+Base64.fromUint8Array(x)+suffix);
+        let array = new Uint8Array(buff);
+        setBase64(prefix+Buffer.from(array).toString("base64")+suffix);
       })
     }
   } 
