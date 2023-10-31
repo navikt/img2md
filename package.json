@@ -23,6 +23,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@typescript-eslint/parser": "^6.9.1",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
