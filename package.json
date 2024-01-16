@@ -12,7 +12,7 @@
     "node": ">=20.9.0"
   },
   "dependencies": {
-    "@navikt/ds-css": "^5.8.0",
+    "@navikt/ds-css": "^5.14.0",
     "@navikt/ds-react": "^5.8.0",
     "@navikt/ds-tailwind": "^5.8.0",
     "@types/node": "20.8.9",
