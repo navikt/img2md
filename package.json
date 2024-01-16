@@ -15,7 +15,7 @@
     "@navikt/ds-css": "^5.8.0",
     "@navikt/ds-react": "^5.8.0",
     "@navikt/ds-tailwind": "^5.8.0",
-    "@types/node": "20.8.9",
+    "@types/node": "20.11.4",
     "@types/react": "18.2.33",
     "@types/react-dom": "18.2.14",
     "eslint": "8.52.0",
